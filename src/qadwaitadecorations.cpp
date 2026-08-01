@@ -183,16 +183,16 @@ void QAdwaitaDecorations::updateColors(bool useDarkColors)
     qCDebug(QAdwaitaDecorationsLog)
             << "Changing color scheme to " << (useDarkColors ? "dark" : "light");
 
-    m_colors = { { Background, useDarkColors ? QColor(0x2e2e32) : QColor(0xffffff) },
-                 { BackgroundInactive, useDarkColors ? QColor(0x222226) : QColor(0xfafafb) },
-                 { Foreground, useDarkColors ? QColor(0xffffff) : QColor(0x333338) },
-                 { ForegroundInactive, useDarkColors ? QColor(0x919193) : QColor(0x969699) },
-                 { Border, useDarkColors ? QColor(0x2e2e32) : QColor(0xffffff) },
-                 { BorderInactive, useDarkColors ? QColor(0x2e2e32) : QColor(0xffffff) },
-                 { ButtonBackground, useDarkColors ? QColor(0x434347) : QColor(0xebebeb) },
-                 { ButtonBackgroundInactive, useDarkColors ? QColor(0x2d2d31) : QColor(0xf0f0f1) },
-                 { HoveredButtonBackground, useDarkColors ? QColor(0x4d4d51) : QColor(0xe0e0e1) },
-                 { PressedButtonBackground, useDarkColors ? QColor(0x6c6c6f) : QColor(0xc2c2c3) } };
+    m_colors = { { Background, useDarkColors ? QColor(0x2c2c2c) : QColor(0xf7f7f7) },
+                 { BackgroundInactive, useDarkColors ? QColor(0x353535) : QColor(0xf7f7f7) },
+                 { Foreground, useDarkColors ? QColor(0xf6f6f6) : QColor(0x3d3d3d) },
+                 { ForegroundInactive, useDarkColors ? QColor(0xb5b5b5) : QColor(0x646464) },
+                 { Border, useDarkColors ? QColor(0x0a0a0b) : QColor(0xfbfbfb) },
+                 { BorderInactive, useDarkColors ? QColor(0x0b0b0c) : QColor(0xfefefe) },
+                 { ButtonBackground, useDarkColors ? QColor(0x373737) : QColor(0xdadada) },
+                 { ButtonBackgroundInactive, useDarkColors ? QColor(0x2c2c2c) : QColor(0xf0f0f1) },
+                 { HoveredButtonBackground, useDarkColors ? QColor(0x424242) : QColor(0xd1d1d1) },
+                 { PressedButtonBackground, useDarkColors ? QColor(0x565656) : QColor(0xbfbfbf) } };
     forceRepaint();
 }
 
