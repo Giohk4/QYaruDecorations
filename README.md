@@ -1,7 +1,9 @@
-# QAdwaitaDecorations
-Qt decoration plugin implementing Adwaita-like client-side decorations.
+# QYaruDecorations
+
+Qt decoration plugin implementing a Yaru-like client-side decorations.
 
 ## How to compile
+
 This library uses private Qt headers and will likely not be forward nor
 backward compatible. This library will have to be recompiled with every
 Qt update. While it can be build using Qt 5, it is recommended to get
@@ -17,17 +19,34 @@ make && make install
 ```
 
 ## Usage
+
 It can be used by setting the QT_WAYLAND_DECORATION environment variable:
 
 ```
-export QT_WAYLAND_DECORATION=adwaita
+export QT_WAYLAND_DECORATION=yaru
 ```
 
-Newer version of Qt6 includes an implementation of this plugin. To force decorations from this plugin, set the QT_WAYLAND_DECORATION environment variable to the following value:
+or
+
 ```
-export QT_WAYLAND_DECORATION=qadwaitadecorations
+export QT_WAYLAND_DECORATION=qyarudecorations
+```
+
+### NOTE:
+
+if you want this to persiste and apply to all system Qt applications, use /etc/environment.d
+if that directory doesn't already exist create it with
+
+```
+sudo mkdir /etc/environment.d
+```
+
+then create a generic numbered file there containing the enviroment variable
+
+```
+echo "QT_WAYLAND_DECORATIONS=yaru" | sudo tee /etc/environment.d/10-qt-yaru-decorations
 ```
 
 ## License
-The code is under [LGPL 2.1](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html) with the "or any later version" clause.
 
+The code is under [LGPL 2.1](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html) with the "or any later version" clause.
