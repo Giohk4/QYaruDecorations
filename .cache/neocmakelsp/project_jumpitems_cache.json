@@ -1,0 +1,1382 @@
+{
+  "date": "2026-08-01T16:23:01.343700382+01:00",
+  "data": {
+    "qadwaitadecorations_SRCS": {
+      "location": {
+        "uri": "file:///home/nassim/Git/QYaruDecorations/src/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 1,
+            "character": 4
+          },
+          "end": {
+            "line": 1,
+            "character": 28
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /home/nassim/Git/QYaruDecorations/src/CMakeLists.txt",
+      "is_function": false
+    },
+    "validWhatParts": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 756,
+            "character": 6
+          },
+          "end": {
+            "line": 756,
+            "character": 20
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "USE_QT6": {
+      "location": {
+        "uri": "file:///home/nassim/Git/QYaruDecorations/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 7,
+            "character": 7
+          },
+          "end": {
+            "line": 7,
+            "character": 14
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /home/nassim/Git/QYaruDecorations/CMakeLists.txt",
+      "is_function": false
+    },
+    "_GNUInstallDirs_cache_convert_to_path": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 263,
+            "character": 9
+          },
+          "end": {
+            "line": 263,
+            "character": 46
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": true
+    },
+    "_GNUInstallDirs_INCLUDEDIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 426,
+            "character": 4
+          },
+          "end": {
+            "line": 426,
+            "character": 38
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "GGAID_extra_args": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 641,
+            "character": 6
+          },
+          "end": {
+            "line": 641,
+            "character": 22
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "__GNUInstallDirs_default_in_usr": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 402,
+            "character": 9
+          },
+          "end": {
+            "line": 402,
+            "character": 40
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake\n\nCommon handler for defaults that should be in usr/<dir>",
+      "is_function": true
+    },
+    "allWhatParts": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 814,
+            "character": 10
+          },
+          "end": {
+            "line": 814,
+            "character": 22
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "title_DISABLED_FEATURES": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 769,
+            "character": 6
+          },
+          "end": {
+            "line": 769,
+            "character": 29
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_RUNSTATEDIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 583,
+            "character": 4
+          },
+          "end": {
+            "line": 583,
+            "character": 39
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_SHAREDSTATEDIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 423,
+            "character": 4
+          },
+          "end": {
+            "line": 423,
+            "character": 42
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_BINDIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 419,
+            "character": 4
+          },
+          "end": {
+            "line": 419,
+            "character": 34
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake\n\nSet the standard default values before any special handling",
+      "is_function": false
+    },
+    "_property": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 649,
+            "character": 8
+          },
+          "end": {
+            "line": 649,
+            "character": 17
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "_fullText": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 829,
+            "character": 8
+          },
+          "end": {
+            "line": 829,
+            "character": 17
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "_fsPkgTypeDescription": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 773,
+            "character": 8
+          },
+          "end": {
+            "line": 773,
+            "character": 29
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "SET_PACKAGE_INFO": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 975,
+            "character": 9
+          },
+          "end": {
+            "line": 975,
+            "character": 25
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": true
+    },
+    "_GNUInstallDirs_RUNSTATEDIR_get_default": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 495,
+            "character": 9
+          },
+          "end": {
+            "line": 495,
+            "character": 48
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake\n\nDepends on current CMAKE_INSTALL_LOCALSTATEDIR value",
+      "is_function": true
+    },
+    "${cmake_install_var}": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 336,
+            "character": 8
+          },
+          "end": {
+            "line": 336,
+            "character": 28
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "_enabled": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 954,
+            "character": 12
+          },
+          "end": {
+            "line": 954,
+            "character": 20
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "GGAID_dir": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 647,
+            "character": 8
+          },
+          "end": {
+            "line": 647,
+            "character": 17
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake\n\nHistorical behavior: use ${dir} from caller's scope",
+      "is_function": false
+    },
+    "GNUInstallDirs_get_absolute_install_dir": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 640,
+            "character": 9
+          },
+          "end": {
+            "line": 640,
+            "character": 48
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": true
+    },
+    "__GNUInstallDirs_default_in_root": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 392,
+            "character": 9
+          },
+          "end": {
+            "line": 392,
+            "character": 41
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake\n\ni.e. SYSCONFDIR and LOCALSTATEDIR",
+      "is_function": true
+    },
+    "options": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 877,
+            "character": 6
+          },
+          "end": {
+            "line": 877,
+            "character": 13
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "title_${_fsPkgType}_PACKAGES_FOUND": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 778,
+            "character": 8
+          },
+          "end": {
+            "line": 778,
+            "character": 42
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "SET_FEATURE_INFO": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 994,
+            "character": 9
+          },
+          "end": {
+            "line": 994,
+            "character": 25
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": true
+    },
+    "_GNUInstallDirs_special_absolute": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 378,
+            "character": 9
+          },
+          "end": {
+            "line": 378,
+            "character": 41
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake\n\nUsed for SYSCONFDIR, LOCALSTATEDIR and RUNSTATEDIR paths",
+      "is_function": true
+    },
+    "${var}": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 672,
+            "character": 12
+          },
+          "end": {
+            "line": 672,
+            "character": 18
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "conda_prefix": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 354,
+            "character": 8
+          },
+          "end": {
+            "line": 354,
+            "character": 20
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "PRINT_DISABLED_FEATURES": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 1005,
+            "character": 9
+          },
+          "end": {
+            "line": 1005,
+            "character": 32
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": true
+    },
+    "title_PACKAGES_FOUND": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 770,
+            "character": 6
+          },
+          "end": {
+            "line": 770,
+            "character": 26
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "PRINT_ENABLED_FEATURES": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 999,
+            "character": 9
+          },
+          "end": {
+            "line": 999,
+            "character": 31
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": true
+    },
+    "oneValueArgs": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 878,
+            "character": 6
+          },
+          "end": {
+            "line": 878,
+            "character": 18
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake\n\nnone",
+      "is_function": false
+    },
+    "_FS_DEFAULT_DESCRIPTION": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 753,
+            "character": 8
+          },
+          "end": {
+            "line": 753,
+            "character": 31
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_LIBDIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 425,
+            "character": 4
+          },
+          "end": {
+            "line": 425,
+            "character": 34
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "cmake_install_var": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 326,
+            "character": 6
+          },
+          "end": {
+            "line": 326,
+            "character": 23
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "_currentType": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 672,
+            "character": 10
+          },
+          "end": {
+            "line": 672,
+            "character": 22
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "QT_MIN_VERSION": {
+      "location": {
+        "uri": "file:///home/nassim/Git/QYaruDecorations/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 16,
+            "character": 8
+          },
+          "end": {
+            "line": 16,
+            "character": 22
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /home/nassim/Git/QYaruDecorations/CMakeLists.txt",
+      "is_function": false
+    },
+    "title_ENABLED_FEATURES": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 768,
+            "character": 6
+          },
+          "end": {
+            "line": 768,
+            "character": 28
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_OLDINCLUDEDIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 427,
+            "character": 4
+          },
+          "end": {
+            "line": 427,
+            "character": 41
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "CMAKE_AUTOMOC": {
+      "location": {
+        "uri": "file:///home/nassim/Git/QYaruDecorations/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 9,
+            "character": 4
+          },
+          "end": {
+            "line": 9,
+            "character": 17
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /home/nassim/Git/QYaruDecorations/CMakeLists.txt",
+      "is_function": false
+    },
+    "_GNUInstallDirs_LIBDIR_get_default": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 440,
+            "character": 9
+          },
+          "end": {
+            "line": 440,
+            "character": 43
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": true
+    },
+    "${_FS_VAR}": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 863,
+            "character": 10
+          },
+          "end": {
+            "line": 863,
+            "character": 20
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "_url": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 980,
+            "character": 8
+          },
+          "end": {
+            "line": 980,
+            "character": 12
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "ADD_FEATURE_INFO": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 935,
+            "character": 9
+          },
+          "end": {
+            "line": 935,
+            "character": 25
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": true
+    },
+    "_GNUInstallDirs_DATADIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 580,
+            "character": 4
+          },
+          "end": {
+            "line": 580,
+            "character": 35
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "_FS_GET_FEATURE_SUMMARY": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 634,
+            "character": 9
+          },
+          "end": {
+            "line": 634,
+            "character": 32
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": true
+    },
+    "includeThisOne": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 697,
+            "character": 12
+          },
+          "end": {
+            "line": 697,
+            "character": 26
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "_purpose": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 983,
+            "character": 8
+          },
+          "end": {
+            "line": 983,
+            "character": 16
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "install_prefix_is_same": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 284,
+            "character": 10
+          },
+          "end": {
+            "line": 284,
+            "character": 32
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "_currentFeatureText": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 653,
+            "character": 6
+          },
+          "end": {
+            "line": 653,
+            "character": 25
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "SET_PACKAGE_PROPERTIES": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 872,
+            "character": 9
+          },
+          "end": {
+            "line": 872,
+            "character": 31
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": true
+    },
+    "CMAKE_CXX_STANDARD": {
+      "location": {
+        "uri": "file:///home/nassim/Git/QYaruDecorations/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 17,
+            "character": 8
+          },
+          "end": {
+            "line": 17,
+            "character": 26
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /home/nassim/Git/QYaruDecorations/CMakeLists.txt",
+      "is_function": false
+    },
+    "${out_var}": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 496,
+            "character": 6
+          },
+          "end": {
+            "line": 496,
+            "character": 16
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "_tmp": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 831,
+            "character": 10
+          },
+          "end": {
+            "line": 831,
+            "character": 14
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_SYSCONFDIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 422,
+            "character": 4
+          },
+          "end": {
+            "line": 422,
+            "character": 38
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "QT_PLUGINS_DIR": {
+      "location": {
+        "uri": "file:///home/nassim/Git/QYaruDecorations/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 73,
+            "character": 12
+          },
+          "end": {
+            "line": 73,
+            "character": 26
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /home/nassim/Git/QYaruDecorations/CMakeLists.txt",
+      "is_function": false
+    },
+    "_GNUInstallDirs_MANDIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 575,
+            "character": 6
+          },
+          "end": {
+            "line": 575,
+            "character": 36
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_DOCDIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 582,
+            "character": 4
+          },
+          "end": {
+            "line": 582,
+            "character": 34
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_SBINDIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 420,
+            "character": 4
+          },
+          "end": {
+            "line": 420,
+            "character": 35
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "full_description": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 315,
+            "character": 6
+          },
+          "end": {
+            "line": 315,
+            "character": 22
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake\n\nNormal flow",
+      "is_function": false
+    },
+    "_GNUInstallDirs_get_system_type_for_install": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 344,
+            "character": 9
+          },
+          "end": {
+            "line": 344,
+            "character": 52
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake\n\nCheck what system we are on for LIBDIR formatting",
+      "is_function": true
+    },
+    "multiValueArgs": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 879,
+            "character": 6
+          },
+          "end": {
+            "line": 879,
+            "character": 20
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "default": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 327,
+            "character": 6
+          },
+          "end": {
+            "line": 327,
+            "character": 13
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_INFODIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 565,
+            "character": 6
+          },
+          "end": {
+            "line": 565,
+            "character": 37
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "_required": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 683,
+            "character": 14
+          },
+          "end": {
+            "line": 683,
+            "character": 23
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_LOCALSTATEDIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 424,
+            "character": 4
+          },
+          "end": {
+            "line": 424,
+            "character": 41
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_LIBEXECDIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 421,
+            "character": 4
+          },
+          "end": {
+            "line": 421,
+            "character": 38
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_DATAROOTDIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 428,
+            "character": 4
+          },
+          "end": {
+            "line": 428,
+            "character": 39
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "title_PACKAGES_NOT_FOUND": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 771,
+            "character": 6
+          },
+          "end": {
+            "line": 771,
+            "character": 30
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_cache_path": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 274,
+            "character": 9
+          },
+          "end": {
+            "line": 274,
+            "character": 35
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake\n\nCreate a cache variable with default for a path.",
+      "is_function": true
+    },
+    "title_${_fsPkgType}_PACKAGES_NOT_FOUND": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 779,
+            "character": 8
+          },
+          "end": {
+            "line": 779,
+            "character": 46
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_cache_path_fallback": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 325,
+            "character": 9
+          },
+          "end": {
+            "line": 325,
+            "character": 44
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake\n\nDATAROOTDIR.",
+      "is_function": true
+    },
+    "CMAKE_CXX_STANDARD_REQUIRED": {
+      "location": {
+        "uri": "file:///home/nassim/Git/QYaruDecorations/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 18,
+            "character": 8
+          },
+          "end": {
+            "line": 18,
+            "character": 35
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /home/nassim/Git/QYaruDecorations/CMakeLists.txt",
+      "is_function": false
+    },
+    "return_vars": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 682,
+            "character": 6
+          },
+          "end": {
+            "line": 682,
+            "character": 17
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "requiredPackagesNotFound": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 840,
+            "character": 16
+          },
+          "end": {
+            "line": 840,
+            "character": 40
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "${_var}": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 726,
+            "character": 6
+          },
+          "end": {
+            "line": 726,
+            "character": 13
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 617,
+            "character": 4
+          },
+          "end": {
+            "line": 617,
+            "character": 45
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake\n\nSave for next run",
+      "is_function": false
+    },
+    "_GNUInstallDirs_LOCALEDIR_DEFAULT": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 581,
+            "character": 4
+          },
+          "end": {
+            "line": 581,
+            "character": 37
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    },
+    "FEATURE_SUMMARY": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 729,
+            "character": 9
+          },
+          "end": {
+            "line": 729,
+            "character": 24
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": true
+    },
+    "_type": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/FeatureSummary.cmake",
+        "range": {
+          "start": {
+            "line": 641,
+            "character": 10
+          },
+          "end": {
+            "line": 641,
+            "character": 15
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/FeatureSummary.cmake",
+      "is_function": false
+    },
+    "${absvar}": {
+      "location": {
+        "uri": "file:///usr/share/cmake/Modules/GNUInstallDirs.cmake",
+        "range": {
+          "start": {
+            "line": 679,
+            "character": 8
+          },
+          "end": {
+            "line": 679,
+            "character": 17
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/share/cmake/Modules/GNUInstallDirs.cmake",
+      "is_function": false
+    }
+  }
+}
