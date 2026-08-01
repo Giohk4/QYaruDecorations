@@ -52,17 +52,17 @@ static constexpr int ceShadowsWidth = 10;
 static constexpr int ceTitlebarHeight = 38;
 static constexpr int ceWindowBorderWidth = 1;
 
-static QMap<QAdwaitaDecorations::ButtonIcon, QString> buttonMap = {
-    { QAdwaitaDecorations::CloseIcon, QStringLiteral("window-close-symbolic") },
-    { QAdwaitaDecorations::MinimizeIcon, QStringLiteral("window-minimize-symbolic") },
-    { QAdwaitaDecorations::MaximizeIcon, QStringLiteral("window-maximize-symbolic") },
-    { QAdwaitaDecorations::RestoreIcon, QStringLiteral("window-restore-symbolic") }
+static QMap<QYaruDecorations::ButtonIcon, QString> buttonMap = {
+    { QYaruDecorations::CloseIcon, QStringLiteral("window-close-symbolic") },
+    { QYaruDecorations::MinimizeIcon, QStringLiteral("window-minimize-symbolic") },
+    { QYaruDecorations::MaximizeIcon, QStringLiteral("window-maximize-symbolic") },
+    { QYaruDecorations::RestoreIcon, QStringLiteral("window-restore-symbolic") }
 };
 
 Q_DECL_IMPORT void qt_blurImage(QPainter *p, QImage &blurImage, qreal radius, bool quality,
                                 bool alphaOnly, int transposed = 0);
 
-Q_LOGGING_CATEGORY(QAdwaitaDecorationsLog, "qt.qpa.qadwaitadecorations", QtWarningMsg)
+Q_LOGGING_CATEGORY(QYaruDecorationsLog, "qt.qpa.qyarudecorations", QtWarningMsg)
 
 const QDBusArgument &operator>>(const QDBusArgument &argument, QMap<QString, QVariantMap> &map)
 {
@@ -82,16 +82,16 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, QMap<QString, QVa
     return argument;
 }
 
-QAdwaitaDecorations::QAdwaitaDecorations()
+QYaruDecorations::QYaruDecorations()
 {
 #ifdef HAS_QT6_SUPPORT
 #  if QT_VERSION >= 0x060000
-    qCDebug(QAdwaitaDecorationsLog) << "Using Qt6 version";
+    qCDebug(QYaruDecorationsLog) << "Using Qt6 version";
 #  else
-    qCDebug(QAdwaitaDecorationsLog) << "Using Qt5 version with Qt6 backports";
+    qCDebug(QYaruDecorationsLog) << "Using Qt5 version with Qt6 backports";
 #  endif
 #else
-    qCDebug(QAdwaitaDecorationsLog) << "Using Qt5 version";
+    qCDebug(QYaruDecorationsLog) << "Using Qt5 version";
 #endif
 
     m_lastButtonClick = QDateTime::currentDateTime();
@@ -107,10 +107,10 @@ QAdwaitaDecorations::QAdwaitaDecorations()
     if (!m_font)
         m_font = std::make_unique<QFont>(QLatin1String("Sans"), 10);
 
-    QTimer::singleShot(0, this, &QAdwaitaDecorations::initConfiguration);
+    QTimer::singleShot(0, this, &QYaruDecorations::initConfiguration);
 }
 
-void QAdwaitaDecorations::initConfiguration()
+void QYaruDecorations::initConfiguration()
 {
     qRegisterMetaType<QDBusVariant>();
     qDBusRegisterMetaType<QMap<QString, QVariantMap>>();
@@ -178,9 +178,9 @@ void QAdwaitaDecorations::initConfiguration()
     updateIcons();
 }
 
-void QAdwaitaDecorations::updateColors(bool useDarkColors)
+void QYaruDecorations::updateColors(bool useDarkColors)
 {
-    qCDebug(QAdwaitaDecorationsLog)
+    qCDebug(QYaruDecorationsLog)
             << "Changing color scheme to " << (useDarkColors ? "dark" : "light");
 
     m_colors = { { Background, useDarkColors ? QColor(0x2c2c2c) : QColor(0xf7f7f7) },
@@ -200,7 +200,7 @@ QString getIconSvg(const QString &iconName)
 {
     const QStringList themeNames = { QIcon::themeName(), QIcon::fallbackThemeName(),
                                      QLatin1String("Adwaita") };
-    qCDebug(QAdwaitaDecorationsLog) << "Icon themes: " << themeNames;
+    qCDebug(QYaruDecorationsLog) << "Icon themes: " << themeNames;
 
     for (const QString &themeName : themeNames) {
         for (const QString &path : QIcon::themeSearchPaths()) {
@@ -217,7 +217,7 @@ QString getIconSvg(const QString &iconName)
                     continue;
 
                 if (fileInfo.fileName() == iconName) {
-                    qCDebug(QAdwaitaDecorationsLog)
+                    qCDebug(QYaruDecorationsLog)
                             << "Using " << iconName << " from " << themeName << " theme";
                     QFile readFile(fileInfo.filePath());
                     readFile.open(QFile::ReadOnly);
@@ -227,12 +227,12 @@ QString getIconSvg(const QString &iconName)
         }
     }
 
-    qCWarning(QAdwaitaDecorationsLog) << "Failed to find an svg icon for " << iconName;
+    qCWarning(QYaruDecorationsLog) << "Failed to find an svg icon for " << iconName;
 
     return QString();
 }
 
-void QAdwaitaDecorations::updateIcons()
+void QYaruDecorations::updateIcons()
 {
     for (auto mapIt = buttonMap.constBegin(); mapIt != buttonMap.constEnd(); mapIt++) {
         const QString fullName = mapIt.value() + QStringLiteral(".svg");
@@ -242,9 +242,9 @@ void QAdwaitaDecorations::updateIcons()
     forceRepaint();
 }
 
-void QAdwaitaDecorations::updateTitlebarLayout(const QString &layout)
+void QYaruDecorations::updateTitlebarLayout(const QString &layout)
 {
-    qCDebug(QAdwaitaDecorationsLog) << "Changing titlebar layout to " << layout;
+    qCDebug(QYaruDecorationsLog) << "Changing titlebar layout to " << layout;
 
     const QStringList layouts = layout.split(QLatin1Char(':'));
     if (layouts.count() != 2) {
@@ -282,7 +282,7 @@ void QAdwaitaDecorations::updateTitlebarLayout(const QString &layout)
     forceRepaint();
 }
 
-void QAdwaitaDecorations::settingChanged(const QString &group, const QString &key,
+void QYaruDecorations::settingChanged(const QString &group, const QString &key,
                                          const QDBusVariant &value)
 {
     if (group == QLatin1String("org.gnome.desktop.wm.preferences")
@@ -296,7 +296,7 @@ void QAdwaitaDecorations::settingChanged(const QString &group, const QString &ke
     }
 }
 
-QRectF QAdwaitaDecorations::buttonRect(Button button) const
+QRectF QYaruDecorations::buttonRect(Button button) const
 {
     int xPos;
     int yPos;
@@ -330,7 +330,7 @@ QRectF QAdwaitaDecorations::buttonRect(Button button) const
 }
 
 #ifdef HAS_QT6_SUPPORT
-QMargins QAdwaitaDecorations::margins(MarginsType marginsType) const
+QMargins QYaruDecorations::margins(MarginsType marginsType) const
 {
     const bool onlyShadows = marginsType == ShadowsOnly;
     const bool shadowsExcluded = marginsType == ShadowsExcluded;
@@ -359,7 +359,7 @@ QMargins QAdwaitaDecorations::margins(MarginsType marginsType) const
                     tilingStates & QWaylandWindow::WindowTiledBottom ? 0 : sideMargins);
 }
 #else
-QMargins QAdwaitaDecorations::margins() const
+QMargins QYaruDecorations::margins() const
 {
     if (window()->windowStates() & Qt::WindowMaximized) {
         // Maximized windows don't have anything around, no shadows, border,
@@ -379,7 +379,7 @@ static QColor makeTransparent(const QColor &color, qreal level)
     return transparentColor;
 }
 
-void QAdwaitaDecorations::paint(QPaintDevice *device)
+void QYaruDecorations::paint(QPaintDevice *device)
 {
 #ifdef HAS_QT6_SUPPORT
     const Qt::WindowStates windowStates = waylandWindow()->windowStates();
@@ -557,7 +557,7 @@ void QAdwaitaDecorations::paint(QPaintDevice *device)
     }
 }
 
-static void renderFlatRoundedButtonFrame(QAdwaitaDecorations::Button button, QPainter *painter,
+static void renderFlatRoundedButtonFrame(QYaruDecorations::Button button, QPainter *painter,
                                          const QRect &rect, const QColor &color)
 {
     painter->save();
@@ -591,7 +591,7 @@ static void renderButtonIcon(const QString &svgIcon, QPainter *painter, const QR
     painter->restore();
 }
 
-static void renderButtonIcon(QAdwaitaDecorations::ButtonIcon buttonIcon, QPainter *painter,
+static void renderButtonIcon(QYaruDecorations::ButtonIcon buttonIcon, QPainter *painter,
                              const QRect &rect)
 {
     QString iconName = buttonMap[buttonIcon];
@@ -603,20 +603,20 @@ static void renderButtonIcon(QAdwaitaDecorations::ButtonIcon buttonIcon, QPainte
     painter->restore();
 }
 
-static QAdwaitaDecorations::ButtonIcon iconFromButtonAndState(QAdwaitaDecorations::Button button,
+static QYaruDecorations::ButtonIcon iconFromButtonAndState(QYaruDecorations::Button button,
                                                               bool maximized)
 {
-    if (button == QAdwaitaDecorations::Close)
-        return QAdwaitaDecorations::CloseIcon;
-    else if (button == QAdwaitaDecorations::Minimize)
-        return QAdwaitaDecorations::MinimizeIcon;
-    else if (button == QAdwaitaDecorations::Maximize && maximized)
-        return QAdwaitaDecorations::RestoreIcon;
+    if (button == QYaruDecorations::Close)
+        return QYaruDecorations::CloseIcon;
+    else if (button == QYaruDecorations::Minimize)
+        return QYaruDecorations::MinimizeIcon;
+    else if (button == QYaruDecorations::Maximize && maximized)
+        return QYaruDecorations::RestoreIcon;
     else
-        return QAdwaitaDecorations::MaximizeIcon;
+        return QYaruDecorations::MaximizeIcon;
 }
 
-void QAdwaitaDecorations::paintButton(Button button, QPainter *painter)
+void QYaruDecorations::paintButton(Button button, QPainter *painter)
 {
 #ifdef HAS_QT6_SUPPORT
     const Qt::WindowStates windowStates = waylandWindow()->windowStates();
@@ -652,7 +652,7 @@ void QAdwaitaDecorations::paintButton(Button button, QPainter *painter)
         renderButtonIcon(iconFromButtonAndState(button, maximized), painter, adjustedBtnRect);
 }
 
-bool QAdwaitaDecorations::clickButton(Qt::MouseButtons b, Button btn)
+bool QYaruDecorations::clickButton(Qt::MouseButtons b, Button btn)
 {
     auto repaint = qScopeGuard([this] { forceRepaint(); });
 
@@ -670,7 +670,7 @@ bool QAdwaitaDecorations::clickButton(Qt::MouseButtons b, Button btn)
     return false;
 }
 
-bool QAdwaitaDecorations::doubleClickButton(Qt::MouseButtons b, const QPointF &local,
+bool QYaruDecorations::doubleClickButton(Qt::MouseButtons b, const QPointF &local,
                                             const QDateTime &currentTime)
 {
     if (isLeftClicked(b)) {
@@ -690,7 +690,7 @@ bool QAdwaitaDecorations::doubleClickButton(Qt::MouseButtons b, const QPointF &l
     return false;
 }
 
-bool QAdwaitaDecorations::handleMouse(QWaylandInputDevice *inputDevice, const QPointF &local,
+bool QYaruDecorations::handleMouse(QWaylandInputDevice *inputDevice, const QPointF &local,
                                       const QPointF &global, Qt::MouseButtons b,
                                       Qt::KeyboardModifiers mods)
 {
@@ -728,11 +728,11 @@ bool QAdwaitaDecorations::handleMouse(QWaylandInputDevice *inputDevice, const QP
 }
 
 #if QT_VERSION >= 0x060000
-bool QAdwaitaDecorations::handleTouch(QWaylandInputDevice *inputDevice, const QPointF &local,
+bool QYaruDecorations::handleTouch(QWaylandInputDevice *inputDevice, const QPointF &local,
                                       const QPointF &global, QEventPoint::State state,
                                       Qt::KeyboardModifiers mods)
 #else
-bool QAdwaitaDecorations::handleTouch(QWaylandInputDevice *inputDevice, const QPointF &local,
+bool QYaruDecorations::handleTouch(QWaylandInputDevice *inputDevice, const QPointF &local,
                                       const QPointF &global, Qt::TouchPointState state,
                                       Qt::KeyboardModifiers mods)
 #endif
@@ -762,7 +762,7 @@ bool QAdwaitaDecorations::handleTouch(QWaylandInputDevice *inputDevice, const QP
     return handled;
 }
 
-QRect QAdwaitaDecorations::windowContentGeometry() const
+QRect QYaruDecorations::windowContentGeometry() const
 {
 #ifdef HAS_QT6_SUPPORT
     return waylandWindow()->windowContentGeometry() + margins(ShadowsOnly);
@@ -771,7 +771,7 @@ QRect QAdwaitaDecorations::windowContentGeometry() const
 #endif
 }
 
-void QAdwaitaDecorations::forceRepaint()
+void QYaruDecorations::forceRepaint()
 {
     // Set dirty flag
     if (waylandWindow()->decoration()) {
@@ -784,7 +784,7 @@ void QAdwaitaDecorations::forceRepaint()
     }
 }
 
-void QAdwaitaDecorations::processMouseTop(QWaylandInputDevice *inputDevice, const QPointF &local,
+void QYaruDecorations::processMouseTop(QWaylandInputDevice *inputDevice, const QPointF &local,
                                           Qt::MouseButtons b, Qt::KeyboardModifiers mods)
 {
     Q_UNUSED(mods)
@@ -865,7 +865,7 @@ void QAdwaitaDecorations::processMouseTop(QWaylandInputDevice *inputDevice, cons
     }
 }
 
-void QAdwaitaDecorations::processMouseBottom(QWaylandInputDevice *inputDevice, const QPointF &local,
+void QYaruDecorations::processMouseBottom(QWaylandInputDevice *inputDevice, const QPointF &local,
                                              Qt::MouseButtons b, Qt::KeyboardModifiers mods)
 {
     Q_UNUSED(mods)
@@ -902,7 +902,7 @@ void QAdwaitaDecorations::processMouseBottom(QWaylandInputDevice *inputDevice, c
     }
 }
 
-void QAdwaitaDecorations::processMouseLeft(QWaylandInputDevice *inputDevice, const QPointF &local,
+void QYaruDecorations::processMouseLeft(QWaylandInputDevice *inputDevice, const QPointF &local,
                                            Qt::MouseButtons b, Qt::KeyboardModifiers mods)
 {
     Q_UNUSED(local)
@@ -917,7 +917,7 @@ void QAdwaitaDecorations::processMouseLeft(QWaylandInputDevice *inputDevice, con
     startResize(inputDevice, Qt::LeftEdge, b);
 }
 
-void QAdwaitaDecorations::processMouseRight(QWaylandInputDevice *inputDevice, const QPointF &local,
+void QYaruDecorations::processMouseRight(QWaylandInputDevice *inputDevice, const QPointF &local,
                                             Qt::MouseButtons b, Qt::KeyboardModifiers mods)
 {
     Q_UNUSED(local)
@@ -932,7 +932,7 @@ void QAdwaitaDecorations::processMouseRight(QWaylandInputDevice *inputDevice, co
     startResize(inputDevice, Qt::RightEdge, b);
 }
 
-bool QAdwaitaDecorations::updateButtonHoverState(Button hoveredButton)
+bool QYaruDecorations::updateButtonHoverState(Button hoveredButton)
 {
     bool currentCloseButtonState = m_hoveredButtons.testFlag(Close);
     bool currentMaximizeButtonState = m_hoveredButtons.testFlag(Maximize);
