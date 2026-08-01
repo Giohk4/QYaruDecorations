@@ -1,21 +1,23 @@
 # QYaruDecorations
 
-Qt decoration plugin implementing a Yaru-like client-side decorations.
+A Qt decoration plugin implementing Yaru-like client-side decorations.
 
 ## How to compile
+This Plugin uses private Qt headers and is therefore tied to specific Qt
+versions. It may break after Qt updates and will (likely) require rebuilding
+against the installed Qt version.
 
-This library uses private Qt headers and will likely not be forward nor
-backward compatible. This library will have to be recompiled with every
-Qt update. While it can be build using Qt 5, it is recommended to get
-backported changes from Qt 6. You can get these [here](https://src.fedoraproject.org/rpms/qt5-qtwayland/blob/rawhide/f/qtwayland-decoration-support-backports-from-qt6.patch).
+While it's *possible* to build using Qt 5, that requires
+additional backported patches from Qt 6 (You can get these [here](https://src.fedoraproject.org/rpms/qt5-qtwayland/blob/rawhide/f/qtwayland-decoration-support-backports-from-qt6.patch) )
+Qt5 may have issues and incomplete support.
 
 Build instructions:
 
 ```
 mkdir build
 cd build
-cmake [OPTIONS] [-DUSE_QT6=true] [-HAS_QT6_SUPPORT] ..
-make && make install
+cmake [OPTIONS] [-DUSE_QT6=true] ..
+cmake --build . && sudo cmake --install .
 ```
 
 ## Usage
@@ -26,26 +28,22 @@ It can be used by setting the QT_WAYLAND_DECORATION environment variable:
 export QT_WAYLAND_DECORATION=yaru
 ```
 
-or
-
-```
-export QT_WAYLAND_DECORATION=qyarudecorations
-```
-
 ### NOTE:
 
-if you want this to persiste and apply to all system Qt applications, use /etc/environment.d
+if you want this to persist and apply to all system Qt applications, use /etc/environment.d
 if that directory doesn't already exist create it with
 
 ```
-sudo mkdir /etc/environment.d
+sudo mkdir -p /etc/environment.d
 ```
 
-then create a generic numbered file there containing the enviroment variable
+then create a generic numbered file there containing the environment variable
 
 ```
-echo "QT_WAYLAND_DECORATIONS=yaru" | sudo tee /etc/environment.d/10-qt-yaru-decorations
+echo "QT_WAYLAND_DECORATION=yaru" | sudo tee /etc/environment.d/10-qt-yaru-decorations
 ```
+
+after that you WILL need to log out and log back in for it to apply
 
 ## License
 
