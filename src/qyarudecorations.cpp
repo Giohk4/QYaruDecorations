@@ -17,7 +17,7 @@
  *
  */
 
-#include "qadwaitadecorations.h"
+#include "qyarudecorations.h"
 
 #include <QtWaylandClient/private/qwaylandshellsurface_p.h>
 #include <QtWaylandClient/private/qwaylandshmbackingstore_p.h>

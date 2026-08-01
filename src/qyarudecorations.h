@@ -17,8 +17,8 @@
  *
  */
 
-#ifndef QADWAITA_DECORATIONS_H
-#define QADWAITA_DECORATIONS_H
+#ifndef QYARU_DECORATIONS_H
+#define QYARU_DECORATIONS_H
 
 #include <QtCore/QDateTime>
 #include <QtGui/QPixmap>
@@ -32,7 +32,7 @@ using namespace QtWaylandClient;
 class QDBusVariant;
 class QPainter;
 
-class QAdwaitaDecorations : public QWaylandAbstractDecoration
+class QYaruDecorations : public QWaylandAbstractDecoration
 {
     Q_OBJECT
 public:
@@ -53,8 +53,8 @@ public:
     Q_DECLARE_FLAGS(Buttons, Button);
     enum ButtonIcon { CloseIcon, MinimizeIcon, MaximizeIcon, RestoreIcon };
 
-    QAdwaitaDecorations();
-    virtual ~QAdwaitaDecorations() = default;
+    QYaruDecorations();
+    virtual ~QYaruDecorations() = default;
 
 protected:
 #ifdef HAS_QT6_SUPPORT
@@ -118,6 +118,6 @@ private:
     QMap<ButtonIcon, QString> m_icons;
 };
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(QAdwaitaDecorations::Buttons)
+Q_DECLARE_OPERATORS_FOR_FLAGS(QYaruDecorations::Buttons)
 
-#endif // QADWAITA_DECORATIONS_H
+#endif // QYARU_DECORATIONS_H

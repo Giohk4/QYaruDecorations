@@ -17,20 +17,20 @@
  *
  */
 
-#ifndef QADWAITA_DECORATIONS_PLUGIN_H
-#define QADWAITA_DECORATIONS_PLUGIN_H
+#ifndef QYARU_DECORATIONS_PLUGIN_H
+#define QYARU_DECORATIONS_PLUGIN_H
 
 #include <QtWaylandClient/private/qwaylanddecorationplugin_p.h>
 
 using namespace QtWaylandClient;
 
-class QAdwaitaDecorationsPlugin : public QWaylandDecorationPlugin
+class QYaruDecorationsPlugin : public QWaylandDecorationPlugin
 {
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID QWaylandDecorationFactoryInterface_iid FILE "qadwaitadecorations.json")
+    Q_PLUGIN_METADATA(IID QWaylandDecorationFactoryInterface_iid FILE "qyarudecorations.json")
 public:
     QWaylandAbstractDecoration *create(const QString &system,
                                        const QStringList &paramList) override;
 };
 
-#endif // QADWAITA_DECORATIONS_PLUGIN_H
+#endif // QYARU_DECORATIONS_PLUGIN_H
