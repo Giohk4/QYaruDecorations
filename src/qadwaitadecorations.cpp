@@ -189,7 +189,7 @@ void QAdwaitaDecorations::updateColors(bool useDarkColors)
                  { ForegroundInactive, useDarkColors ? QColor(0xb5b5b5) : QColor(0x646464) },
                  { Border, useDarkColors ? QColor(0x0a0a0b) : QColor(0x9e9e9e) },
                  { BorderInactive, useDarkColors ? QColor(0x0b0b0c) : QColor(0xebebeb) },
-                 { ButtonBackground, useDarkColors ? QColor(0x515151) : QColor(0xdadada) },
+                 { ButtonBackground, useDarkColors ? QColor(0x444444) : QColor(0xdadada) },
                  { ButtonBackgroundInactive, useDarkColors ? QColor(0x353535) : QColor(0xf7f7f7) },
                  { HoveredButtonBackground, useDarkColors ? QColor(0x424242) : QColor(0xd1d1d1) },
                  { PressedButtonBackground, useDarkColors ? QColor(0x565656) : QColor(0xbfbfbf) } };
