@@ -47,7 +47,7 @@
 
 static constexpr int ceButtonSpacing = 12;
 static constexpr int ceButtonWidth = 24;
-static constexpr int ceCornerRadius = 12;
+static constexpr int ceCornerRadius = 15;
 static constexpr int ceShadowsWidth = 10;
 static constexpr int ceTitlebarHeight = 38;
 static constexpr int ceWindowBorderWidth = 1;
@@ -180,8 +180,8 @@ void QYaruDecorations::initConfiguration()
 
 void QYaruDecorations::updateColors(bool useDarkColors)
 {
-    qCDebug(QYaruDecorationsLog)
-            << "Changing color scheme to " << (useDarkColors ? "dark" : "light");
+    qCDebug(QYaruDecorationsLog) << "Changing color scheme to "
+                                 << (useDarkColors ? "dark" : "light");
 
     m_colors = { { Background, useDarkColors ? QColor(0x2c2c2c) : QColor(0xf7f7f7) },
                  { BackgroundInactive, useDarkColors ? QColor(0x353535) : QColor(0xf7f7f7) },
@@ -283,7 +283,7 @@ void QYaruDecorations::updateTitlebarLayout(const QString &layout)
 }
 
 void QYaruDecorations::settingChanged(const QString &group, const QString &key,
-                                         const QDBusVariant &value)
+                                      const QDBusVariant &value)
 {
     if (group == QLatin1String("org.gnome.desktop.wm.preferences")
         && key == QLatin1String("button-layout")) {
@@ -604,7 +604,7 @@ static void renderButtonIcon(QYaruDecorations::ButtonIcon buttonIcon, QPainter *
 }
 
 static QYaruDecorations::ButtonIcon iconFromButtonAndState(QYaruDecorations::Button button,
-                                                              bool maximized)
+                                                           bool maximized)
 {
     if (button == QYaruDecorations::Close)
         return QYaruDecorations::CloseIcon;
@@ -671,7 +671,7 @@ bool QYaruDecorations::clickButton(Qt::MouseButtons b, Button btn)
 }
 
 bool QYaruDecorations::doubleClickButton(Qt::MouseButtons b, const QPointF &local,
-                                            const QDateTime &currentTime)
+                                         const QDateTime &currentTime)
 {
     if (isLeftClicked(b)) {
         const qint64 clickInterval = m_lastButtonClick.msecsTo(currentTime);
@@ -691,8 +691,8 @@ bool QYaruDecorations::doubleClickButton(Qt::MouseButtons b, const QPointF &loca
 }
 
 bool QYaruDecorations::handleMouse(QWaylandInputDevice *inputDevice, const QPointF &local,
-                                      const QPointF &global, Qt::MouseButtons b,
-                                      Qt::KeyboardModifiers mods)
+                                   const QPointF &global, Qt::MouseButtons b,
+                                   Qt::KeyboardModifiers mods)
 {
     Q_UNUSED(global)
 
@@ -729,12 +729,12 @@ bool QYaruDecorations::handleMouse(QWaylandInputDevice *inputDevice, const QPoin
 
 #if QT_VERSION >= 0x060000
 bool QYaruDecorations::handleTouch(QWaylandInputDevice *inputDevice, const QPointF &local,
-                                      const QPointF &global, QEventPoint::State state,
-                                      Qt::KeyboardModifiers mods)
+                                   const QPointF &global, QEventPoint::State state,
+                                   Qt::KeyboardModifiers mods)
 #else
 bool QYaruDecorations::handleTouch(QWaylandInputDevice *inputDevice, const QPointF &local,
-                                      const QPointF &global, Qt::TouchPointState state,
-                                      Qt::KeyboardModifiers mods)
+                                   const QPointF &global, Qt::TouchPointState state,
+                                   Qt::KeyboardModifiers mods)
 #endif
 {
     Q_UNUSED(inputDevice)
@@ -785,7 +785,7 @@ void QYaruDecorations::forceRepaint()
 }
 
 void QYaruDecorations::processMouseTop(QWaylandInputDevice *inputDevice, const QPointF &local,
-                                          Qt::MouseButtons b, Qt::KeyboardModifiers mods)
+                                       Qt::MouseButtons b, Qt::KeyboardModifiers mods)
 {
     Q_UNUSED(mods)
 
@@ -866,7 +866,7 @@ void QYaruDecorations::processMouseTop(QWaylandInputDevice *inputDevice, const Q
 }
 
 void QYaruDecorations::processMouseBottom(QWaylandInputDevice *inputDevice, const QPointF &local,
-                                             Qt::MouseButtons b, Qt::KeyboardModifiers mods)
+                                          Qt::MouseButtons b, Qt::KeyboardModifiers mods)
 {
     Q_UNUSED(mods)
     if (local.x() <= margins().left()) {
@@ -903,7 +903,7 @@ void QYaruDecorations::processMouseBottom(QWaylandInputDevice *inputDevice, cons
 }
 
 void QYaruDecorations::processMouseLeft(QWaylandInputDevice *inputDevice, const QPointF &local,
-                                           Qt::MouseButtons b, Qt::KeyboardModifiers mods)
+                                        Qt::MouseButtons b, Qt::KeyboardModifiers mods)
 {
     Q_UNUSED(local)
     Q_UNUSED(mods)
@@ -918,7 +918,7 @@ void QYaruDecorations::processMouseLeft(QWaylandInputDevice *inputDevice, const 
 }
 
 void QYaruDecorations::processMouseRight(QWaylandInputDevice *inputDevice, const QPointF &local,
-                                            Qt::MouseButtons b, Qt::KeyboardModifiers mods)
+                                         Qt::MouseButtons b, Qt::KeyboardModifiers mods)
 {
     Q_UNUSED(local)
     Q_UNUSED(mods)
