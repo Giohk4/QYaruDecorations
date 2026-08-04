@@ -48,7 +48,11 @@
 static constexpr int ceButtonSpacing = 12;
 static constexpr int ceButtonWidth = 24;
 static constexpr int ceCornerRadius = 15;
-static constexpr int ceShadowsWidth = 10;
+static constexpr int ceShadowsWidth = 25;
+static constexpr int ceShadowsYTopOffset = -1;
+static constexpr int ceShadowsYBottomOffset = 1;
+static constexpr int ceShadowsXLeftOffset = -1;
+static constexpr int ceShadowsXRightOffset = 1;
 static constexpr int ceTitlebarHeight = 38;
 static constexpr int ceWindowBorderWidth = 1;
 
@@ -410,18 +414,23 @@ void QYaruDecorations::paint(QPaintDevice *device)
             QPixmap source = QPixmap(surfaceRect.size());
             source.fill(Qt::transparent);
             {
-                QRect topHalf = surfaceRect.translated(ceShadowsWidth, ceShadowsWidth);
-                topHalf.setSize(QSize(surfaceRect.width() - (2 * ceShadowsWidth),
-                                      surfaceRect.height() / 2));
-
-                QRect bottomHalf = surfaceRect.translated(ceShadowsWidth, surfaceRect.height() / 2);
-                bottomHalf.setSize(QSize(surfaceRect.width() - (2 * ceShadowsWidth),
-                                         (surfaceRect.height() / 2) - ceShadowsWidth));
+                QRect full = surfaceRect.translated(ceShadowsWidth - (ceShadowsXLeftOffset * -1),
+                                                    ceShadowsWidth + ceShadowsYTopOffset);
+                // ceCornerRadius used here to push the bottom rounded coners away, where we later
+                // will clip it off
+                full.setSize(QSize(surfaceRect.width() - (2 * ceShadowsWidth)
+                                           + ceShadowsXRightOffset - ceShadowsXLeftOffset,
+                                   surfaceRect.height() + ceShadowsYBottomOffset
+                                           - ceShadowsYTopOffset - ceShadowsWidth * 2
+                                           + ceCornerRadius));
 
                 QPainter tmpPainter(&source);
-                tmpPainter.setBrush(borderColor);
-                tmpPainter.drawRoundedRect(topHalf, ceCornerRadius, ceCornerRadius);
-                tmpPainter.drawRect(bottomHalf);
+                tmpPainter.setBrush(QColor(0, 0, 0, active ? 90 : 50));
+                tmpPainter.setPen(QColor(0, 0, 0, 0));
+                // use clipping to get rid of the extraneous bottom rounded corners
+                tmpPainter.setClipRect(full.x(), full.y(), full.width(),
+                                       full.height() - ceCornerRadius);
+                tmpPainter.drawRoundedRect(full, ceCornerRadius, ceCornerRadius);
                 tmpPainter.end();
             }
 
@@ -436,7 +445,7 @@ void QYaruDecorations::paint(QPaintDevice *device)
             blurredImage.fill(0);
             {
                 QPainter blurPainter(&blurredImage);
-                qt_blurImage(&blurPainter, backgroundImage, 12, false, false);
+                qt_blurImage(&blurPainter, backgroundImage, 30, false, false);
                 blurPainter.end();
             }
             backgroundImage = blurredImage;
@@ -555,6 +564,7 @@ void QYaruDecorations::paint(QPaintDevice *device)
         if (m_buttons.contains(Minimize))
             paintButton(Minimize, &p);
     }
+    previousActiveState = active;
 }
 
 static void renderFlatRoundedButtonFrame(QYaruDecorations::Button button, QPainter *painter,
