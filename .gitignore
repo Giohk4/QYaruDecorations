@@ -1,0 +1,30 @@
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Temp files
+*.tmp
+*.temp
+*.bak
+*.cache
+.cache/
+
+# Build files
+build/
+dist/
+out/
+target/
+.build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+
+# Misc generated files
+.generated/
+.generated.*
