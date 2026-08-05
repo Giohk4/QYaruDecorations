@@ -426,7 +426,7 @@ void QYaruDecorations::paint(QPaintDevice *device)
                                            + ceCornerRadius));
 
                 QPainter tmpPainter(&source);
-                tmpPainter.setBrush(QColor(0, 0, 0, active ? 90 : 50));
+                tmpPainter.setBrush(QColor(0, 0, 0, active ? 127 : 51));
                 tmpPainter.setPen(QColor(0, 0, 0, 0));
                 // use clipping to get rid of the extraneous bottom rounded corners
                 tmpPainter.setClipRect(full.x(), full.y(), full.width(),
