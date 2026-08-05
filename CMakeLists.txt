@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
 project(QYaruDecorations
-    VERSION 0.1.7
+    VERSION 0.1.0
     DESCRIPTION "Qt Wayland decoration plugin using the yaru style"
     LANGUAGES CXX C)
 
