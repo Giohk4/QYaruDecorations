@@ -2,7 +2,7 @@
 
 A Qt decoration plugin implementing Yaru-like client-side decorations.
 
-![Screenshot](screenshots.png)
+![Screenshot](screenshot.png)
 <details>
 <summary>Screenshot details</summary>
 
