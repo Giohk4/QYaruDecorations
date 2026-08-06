@@ -543,11 +543,16 @@ void QYaruDecorations::paint(QPaintDevice *device)
                 titleBar.setRight(surfaceRect.width() - margins().right() - 3);
             }
 
+            const int halfExtent = qMin(top.width() / 2 - margins().left(),
+                                        qMin(top.left() + top.width() / 2 - titleBar.left(),
+                                             titleBar.right() - (top.left() + top.width() / 2)));
+            const int availableWidth = qMax(0, halfExtent * 2);
+
             if (m_windowTitle.text() != windowTitleText
-                || titleBar.width() != previousTitleBarWidth) {
+                || availableWidth != previousTitleBarWidth) {
                 QFontMetrics fm(*m_font);
                 m_windowTitle.setText(
-                        fm.elidedText(windowTitleText, Qt::ElideRight, titleBar.width()));
+                        fm.elidedText(windowTitleText, Qt::ElideRight, availableWidth));
                 m_windowTitle.prepare();
             }
 
@@ -555,7 +560,16 @@ void QYaruDecorations::paint(QPaintDevice *device)
             p.setClipRect(titleBar);
             p.setPen(foregroundColor);
             QSize size = m_windowTitle.size().toSize();
-            int dx = top.left() + (top.width() - size.width()) / 2;
+            // Center against the full surface width (GTK-style),
+            // then clamp so the title never overlaps the buttons.
+            int dx = margins().left()
+                    + (surfaceRect.width() - margins().left() - margins().right() - size.width())
+                            / 2;
+            if (dx < titleBar.left())
+                dx = titleBar.left();
+            if (dx + size.width() > titleBar.right())
+                dx = titleBar.right() - size.width();
+
             int dy = (top.height() - size.height()) / 2;
             p.setFont(*m_font);
             QPoint windowTitlePoint(dx, top.topLeft().y() + dy);
