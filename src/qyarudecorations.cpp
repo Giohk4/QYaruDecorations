@@ -545,10 +545,10 @@ void QYaruDecorations::paint(QPaintDevice *device)
             p.setClipRect(titleBar);
             p.setPen(foregroundColor);
             QSize size = m_windowTitle.size().toSize();
-            int dx = (top.width() - size.width()) / 2;
+            int dx = top.left() + (top.width() - size.width()) / 2;
             int dy = (top.height() - size.height()) / 2;
             p.setFont(*m_font);
-            QPoint windowTitlePoint(top.topLeft().x() + dx, top.topLeft().y() + dy);
+            QPoint windowTitlePoint(dx, top.topLeft().y() + dy);
             p.drawStaticText(windowTitlePoint, m_windowTitle);
             p.restore();
         }
