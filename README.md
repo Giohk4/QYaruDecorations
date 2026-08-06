@@ -2,7 +2,16 @@
 
 A Qt decoration plugin implementing Yaru-like client-side decorations.
 
-![Plugin in Action](screenshots.png)
+![Screenshot](screenshots.png)
+<details>
+<summary>Screenshot details</summary>
+
+- **Theme used:** KvYaru-blue-Dark
+- **Wallpaper:** [Ubuntu 21.10 Wallpaper compettion Winner](https://ubuntu.com/blog/winners-of-the-21-10-wallpaper-competition)
+- **Icon theme:** Yaru-blue-dark
+- **Font:** Noto Sans Medium (11pt)
+
+</details>
 
 ## Table of Contents
 
