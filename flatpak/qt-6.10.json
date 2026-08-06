@@ -1,0 +1,39 @@
+{
+    "id": "org.kde.WaylandDecoration.QYaruDecorations",
+    "branch": "6.10",
+    "runtime": "org.kde.Platform",
+    "build-extension": true,
+    "sdk": "org.kde.Sdk",
+    "runtime-version": "6.10",
+    "separate-locales": false,
+    "modules": [
+        {
+            "name": "qyarudecorations",
+            "buildsystem": "cmake-ninja",
+            "config-opts": ["-DCMAKE_INSTALL_PREFIX=/usr/share/runtime/lib/plugins/QYaruDecorations",
+                            "-DQT_PLUGINS_DIR=/usr/share/runtime/lib/plugins/QYaruDecorations",
+                            "-DUSE_QT6=ON"],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/Giohk4/QYaruDecorations.git",
+                    "tag": "0.1.0"
+                }
+            ]
+        },
+        {
+            "name": "appdata",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p ${FLATPAK_DEST}/share/metainfo",
+                "cp org.kde.WaylandDecoration.QYaruDecorations.metainfo.xml ${FLATPAK_DEST}/share/metainfo"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "org.kde.WaylandDecoration.QYaruDecorations.metainfo.xml"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+name: Build QYaruDecorations Flatpak Runtime Extensions
+
+on:
+  release:
+    types: [created]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - qt: "6.10"
+            manifest: "flatpak/qt-6.10.json"
+          - qt: "6.9"
+            manifest: "flatpak/qt-6.9.json"
+
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/flathub-infra/flatpak-github-actions:kde-${{ matrix.qt }}
+      options: --privileged
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+        with:
+          manifest-path: ${{ matrix.manifest }}
+          bundle: qt-plugin-${{ matrix.qt }}.flatpak
+          cache-key: flatpak-builder-${{ matrix.qt }}-${{ github.sha }}
+
+      - name: Attach to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: qt-plugin-${{ matrix.qt }}.flatpak
