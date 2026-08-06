@@ -527,18 +527,28 @@ void QYaruDecorations::paint(QPaintDevice *device)
         const QString windowTitleText = window()->title();
 #endif
         if (!windowTitleText.isEmpty()) {
-            if (m_windowTitle.text() != windowTitleText) {
-                m_windowTitle.setText(windowTitleText);
-                m_windowTitle.prepare();
-            }
+            // Define lenght
+            Button furthestButton = Close;
+            if (m_buttons.contains(Maximize))
+                furthestButton = Maximize;
+            if (m_buttons.contains(Minimize))
+                furthestButton = Minimize;
 
             QRect titleBar = top;
             if (m_placement == Right) {
-                titleBar.setLeft(margins().left());
-                titleBar.setRight(static_cast<int>(buttonRect(Minimize).left()) - 8);
+                titleBar.setLeft(margins().left() + 3);
+                titleBar.setRight(static_cast<int>(buttonRect(furthestButton).left()) - 8);
             } else {
-                titleBar.setLeft(static_cast<int>(buttonRect(Minimize).right()) + 8);
-                titleBar.setRight(surfaceRect.width() - margins().right());
+                titleBar.setLeft(static_cast<int>(buttonRect(furthestButton).right()) + 8);
+                titleBar.setRight(surfaceRect.width() - margins().right() - 3);
+            }
+
+            if (m_windowTitle.text() != windowTitleText
+                || titleBar.width() != previousTitleBarWidth) {
+                QFontMetrics fm(*m_font);
+                m_windowTitle.setText(
+                        fm.elidedText(windowTitleText, Qt::ElideRight, titleBar.width()));
+                m_windowTitle.prepare();
             }
 
             p.save();
@@ -551,6 +561,8 @@ void QYaruDecorations::paint(QPaintDevice *device)
             QPoint windowTitlePoint(dx, top.topLeft().y() + dy);
             p.drawStaticText(windowTitlePoint, m_windowTitle);
             p.restore();
+
+            previousTitleBarWidth = titleBar.width();
         }
     }
 

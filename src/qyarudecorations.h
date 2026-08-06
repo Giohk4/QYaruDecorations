@@ -118,6 +118,7 @@ private:
     QPixmap m_shadowPixmap;
     QMap<ButtonIcon, QString> m_icons;
 
+    int previousTitleBarWidth = 0;
     bool previousActiveState = false;
 };
 
